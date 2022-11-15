@@ -1,0 +1,65 @@
+header {
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to right, #304A97 , #301B84);
+    padding: 10px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+    width: 25%;
+}
+
+.weather-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+    width:70%;
+    margin-right: 2rem;
+}
+
+.current-day {
+    margin-bottom: 1rem;
+}
+
+.five-day-forecast {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-bd-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet);
+  --bs-btn-border-color: var(--bd-violet);
+  --bs-btn-border-radius: .5rem;
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+@media screen and (max-width: 785px) {
+    .content-container {
+        flex-direction: column;
+    }
+  }
