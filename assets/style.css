@@ -43,6 +43,10 @@ aside {
     justify-content: space-between;
 }
 
+.cd-sz {
+    max-width: 15rem;
+}
+
 .btn-bd-primary {
   --bs-btn-font-weight: 600;
   --bs-btn-color: var(--bs-white);
@@ -58,8 +62,104 @@ aside {
   --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }
 
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 1670px) {    
+    .weather-container {
+        width:75%;        
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1645px) {    
+    .cd-sz {
+        max-width: 14rem;
+    }
+}
+
+@media screen and (max-width: 1530px) {    
+    .cd-sz {
+        max-width: 13rem;
+    }
+}
+
+@media screen and (max-width: 1420px) {    
+    .cd-sz {
+        max-width: 12rem;
+    }
+}
+
+@media screen and (max-width: 1320px) {    
+    .cd-sz {
+        max-width: 11rem;
+    }
+}
+
+@media screen and (max-width: 1210px) {    
+    .cd-sz {
+        max-width: 10rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {    
+    .cd-sz {
+        max-width: 9rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
     .content-container {
         flex-direction: column;
     }
-  }
+
+    aside {
+        width: 35%;
+    }
+
+    .weather-container {
+        width:100%;        
+        margin-right: 0;
+    }
+
+    .cd-sz {
+        max-width: 11rem;
+    }
+}
+
+@media screen and (max-width: 820px) {    
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 35%;
+    }
+
+    .five-day-forecast {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;              
+    }
+
+    .cd-sz {
+        margin: 2px;
+        max-width: 12rem;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    aside {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    aside {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    aside {
+        width: 75%;
+    }
+}
