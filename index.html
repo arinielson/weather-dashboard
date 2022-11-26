@@ -16,52 +16,23 @@
         <aside>
             <h2>Search for a City</h2>
             <br>
-            <input type="text" class="form-control border-dark" placeholder="Enter City">
+            <input type="text" class="form-control border-dark" id="search-input" placeholder="Enter City">
             <br>
             <button class="btn btn-primary btn-outline-light" id="search-button">Search</button>
             <hr>
             <h2>Recent Searches:</h2>            
-            <span class="recent-search"></span>
+            <span class="recent-search" id="recent-searches"></span>
         </aside>
         <div class="weather-container">
-            <div class="current-day card card-body text-bg-light border-dark">
-                <h2>City (Date) Icon</h2>
-                <p>Temp: </p>
-                <p>Wind: </p>
-                <p>Humidity: </p>
+            <div class="current-day card card-body text-bg-light border-dark" id="today">
+                <h2 id="city">City (Date) Icon</h2>
+                <p id="temp">Temp: </p>
+                <p id="wind">Wind: </p>
+                <p id="humidity">Humidity: </p>
             </div>            
             <h3>5-Day Forecast:</h3>
             <div class="five-day-forecast">
-                <div class="card card-body text-bg-dark border-dark cd-sz" id="day-1">
-                    <h4>Date</h4>
-                    <p>Temp: </p>
-                    <p>Wind: </p>
-                    <p>Humidity: </p>
-                </div>
-                <div class="card card-body text-bg-dark border-dark cd-sz" id="day-2">
-                    <h4>Date</h4>
-                    <p>Temp: </p>
-                    <p>Wind: </p>
-                    <p>Humidity: </p>
-                </div>
-                <div class="card card-body text-bg-dark border-dark cd-sz" id="day-3">
-                    <h4>Date</h4>
-                    <p>Temp: </p>
-                    <p>Wind: </p>
-                    <p>Humidity: </p>
-                </div>
-                <div class="card card-body text-bg-dark border-dark cd-sz" id="day-4">
-                    <h4>Date</h4>
-                    <p>Temp: </p>
-                    <p>Wind: </p>
-                    <p>Humidity: </p>
-                </div>
-                <div class="card card-body text-bg-dark border-dark cd-sz" id="day-5">
-                    <h4>Date</h4>
-                    <p>Temp: </p>
-                    <p>Wind: </p>
-                    <p>Humidity: </p>
-                </div>
+                <!--5 day forecast cards-->
             </div>
         </div>
     </main>
