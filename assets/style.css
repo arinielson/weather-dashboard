@@ -36,6 +36,11 @@ aside {
     margin-bottom: 1rem;
 }
 
+.recent-search {
+    display: flex;
+    flex-direction: column;
+}
+
 .five-day-forecast {
     margin-top: 1rem;
     display: flex;

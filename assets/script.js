@@ -49,7 +49,7 @@ function createRecentButtons() {
         var recentBtn = document.createElement('button');
         recentBtn.append(recentCities[i]);
         recentBtn.setAttribute('city-search', recentCities[i]);
-        recentBtn.classList.add('btn-secondary');
+        recentBtn.setAttribute('class', 'btn btn-secondary m-1');
         recentSearches.append(recentBtn);
     }
 }
@@ -84,7 +84,7 @@ function getWeatherAPI(location) {
         return res.json();
     })
     .then(function (data) {
-        buildBoxes(city, data);
+        buildBoxes(data);
         currentCityHelper(city, data);
     })
     .catch(function (err) {
@@ -92,7 +92,7 @@ function getWeatherAPI(location) {
     });
 }
 
-function buildBoxes(city, data) {
+function buildBoxes(data) {
     var weatherData = data.list;
     var fiveDayForecast = document.getElementById('five-day-forecast');
     fiveDayForecast.innerHTML = '';
