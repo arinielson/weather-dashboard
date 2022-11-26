@@ -99,7 +99,7 @@ function buildBoxes(city, data) {
     
     for (let i = 7; i <= weatherData.length; i += 8) {
         let newBox = document.createElement("div");
-        newBox.setAttribute('class', 'day-box');
+        newBox.setAttribute('class', 'card card-body text-bg-dark border-dark cd-sz');
         let newBoxDate = document.createElement('h2');
         newBoxDate.setAttribute('class', 'day-box-date');
         let iconWeatherDay = weatherData[i].weather[0].icon;
