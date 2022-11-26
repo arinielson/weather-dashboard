@@ -27,7 +27,7 @@ function searchBtnClick(e) {
 }
 
 function recentBtnClick(e) {
-    if (!e.target.matches('.button-history')) {
+    if (!e.target.matches('#button-history')) {
         return;
     }
 
@@ -49,6 +49,7 @@ function createRecentButtons() {
         var recentBtn = document.createElement('button');
         recentBtn.append(recentCities[i]);
         recentBtn.setAttribute('city-search', recentCities[i]);
+        recentBtn.setAttribute('id', 'button-history');
         recentBtn.setAttribute('class', 'btn btn-secondary m-1');
         recentSearches.append(recentBtn);
     }
@@ -80,11 +81,11 @@ function getWeatherAPI(location) {
     var requestWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`;
 
     fetch(requestWeatherURL)
-    .then(function (res) {
-        return res.json();
+    .then(function (res) {        
+        return res.json();        
     })
     .then(function (data) {
-        buildBoxes(data);
+        buildBoxes(data);        
         currentCityHelper(city, data);
     })
     .catch(function (err) {
@@ -99,7 +100,7 @@ function buildBoxes(data) {
     
     for (let i = 7; i <= weatherData.length; i += 8) {
         let newBox = document.createElement("div");
-        newBox.setAttribute('class', 'card card-body text-bg-dark border-dark cd-sz');
+        newBox.setAttribute('class', 'card card-body text-bg-dark border-dark cd-sz m-1');
         let newBoxDate = document.createElement('h2');
         newBoxDate.setAttribute('class', 'day-box-date');
         let iconWeatherDay = weatherData[i].weather[0].icon;
@@ -130,15 +131,15 @@ function buildBoxes(data) {
 function currentCityHelper(city, data) {
     const iconWeather = data.list[0].weather[0].icon;
     var iconURL = `http://openweathermap.org/img/wn/${iconWeather}.png`;
-    currentCityInfo.innerText = `${city} ${currentTime.format('M/D/YYYY')}`;
+    currentCityInfo.innerText = `${city} ${currentDay.format('M/D/YYYY')}`;
     var currentCityIcon = document.createElement('img');
     currentCityIcon.setAttribute('src', iconURL);
     currentCityInfo.append(currentCityIcon);
-    var currentCityTemp = document.getElementById('current-temp');
+    var currentCityTemp = document.getElementById('temp');
     currentCityTemp.innerHTML = `Temp: ${data.list[0].main.temp} &#8457;`;
-    var currentCityWind = document.getElementById('current-wind');
+    var currentCityWind = document.getElementById('wind');
     currentCityWind.innerHTML = `Wind: ${data.list[0].wind.speed} mph`;
-    var currentCityHum = document.getElementById('current-humidity');
+    var currentCityHum = document.getElementById('humidity');
     currentCityHum.innerHTML = `Humidity: ${data.list[0].main.humidity} %`;
 }
 

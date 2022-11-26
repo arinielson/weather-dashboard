@@ -41,7 +41,7 @@ aside {
     flex-direction: column;
 }
 
-.five-day-forecast {
+.five-day {
     margin-top: 1rem;
     display: flex;
     flex-direction: row;

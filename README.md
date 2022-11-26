@@ -30,7 +30,7 @@ THEN I am again presented with current and future conditions for that city
 
 The following image shows the web application's appearance and functionality:
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./assets/06-server-side-apis-homework-demo.png)
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./assets/Weather-API-ScreenShot.jpg)
 
 
 ## Links
@@ -40,11 +40,15 @@ GitHub: https://github.com/arinielson/weather-dashboard
 Website: https://arinielson.github.io/weather-dashboard/
 
 
+## Credits
+
+University of Utah Coding Bootcamp
+
+Day.js
+
+OpenWeather API
+
+
 ## License
 
 Public
-
-
-## Project Status
-
-Work in Progress
